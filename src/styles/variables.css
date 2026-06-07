@@ -1,0 +1,59 @@
+:root {
+  /* Brand Colors */
+  --primary: #FF6B9D;
+  --primary-dark: #E91E8C;
+  --primary-light: #FF8FAB;
+  --secondary: #FF4081;
+  --pink-50: #FFF0F5;
+  --pink-100: #FFE4EE;
+  --pink-200: #FFBDD5;
+  --pink-300: #FF8FAB;
+  --accent: #FF6B9D;
+
+  /* Neutral Colors */
+  --white: #FFFFFF;
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #EEEEEE;
+  --gray-300: #E0E0E0;
+  --gray-400: #BDBDBD;
+  --gray-500: #9E9E9E;
+  --gray-600: #757575;
+  --gray-700: #616161;
+  --gray-800: #424242;
+  --gray-900: #212121;
+  --dark: #1A1A2E;
+
+  /* Status Colors */
+  --success: #4CAF50;
+  --error: #F44336;
+  --warning: #FF9800;
+  --info: #2196F3;
+
+  /* Border Radius */
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 30px;
+  --border-radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(255, 107, 157, 0.1);
+  --shadow-md: 0 4px 20px rgba(255, 107, 157, 0.15);
+  --shadow-lg: 0 8px 40px rgba(255, 107, 157, 0.2);
+  --shadow-xl: 0 20px 60px rgba(255, 107, 157, 0.25);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Typography */
+  --font-primary: 'Playfair Display', Georgia, serif;
+  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --container-max: 1280px;
+  --header-height: 72px;
+}

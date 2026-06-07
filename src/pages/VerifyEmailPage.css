@@ -1,0 +1,210 @@
+.verify-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--pink-50) 0%, var(--white) 50%, var(--pink-50) 100%);
+  padding: 2rem 1.5rem;
+}
+
+.verify-card {
+  background: var(--white);
+  border-radius: var(--border-radius-xl);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ─── Icon ───────────────────────────────────────────── */
+.verify-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-100), var(--pink-200));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px rgba(255, 107, 157, 0.2);
+}
+
+/* ─── Text ───────────────────────────────────────────── */
+.verify-title {
+  font-family: var(--font-primary);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+}
+
+.verify-sub {
+  font-size: 0.9375rem;
+  color: var(--gray-500);
+  margin-bottom: 0.25rem;
+}
+
+.verify-email {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.verify-hint {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  margin-bottom: 2rem;
+}
+
+/* ─── OTP Inputs ─────────────────────────────────────── */
+.otp-container {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+.otp-input {
+  width: 52px;
+  height: 60px;
+  border: 2.5px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark);
+  outline: none;
+  transition: var(--transition);
+  font-family: var(--font-secondary);
+  background: var(--white);
+  caret-color: var(--primary);
+  -webkit-appearance: none;
+}
+
+.otp-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.18);
+  background: var(--pink-50);
+}
+
+.otp-input.filled {
+  border-color: var(--primary);
+  background: var(--pink-50);
+  color: var(--primary);
+}
+
+.otp-input.verifying {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.otp-input:disabled {
+  cursor: not-allowed;
+}
+
+/* ─── Verify Button ──────────────────────────────────── */
+.verify-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.35);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-secondary);
+}
+
+.verify-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.5);
+}
+
+.verify-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ─── Resend ─────────────────────────────────────────── */
+.resend-section {
+  margin-bottom: 1.5rem;
+}
+
+.resend-countdown {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+.countdown-val {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.resend-btn {
+  background: transparent;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-secondary);
+}
+
+.resend-btn:hover:not(:disabled) {
+  background: var(--primary);
+  color: #fff;
+}
+
+.resend-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ─── Back ───────────────────────────────────────────── */
+.back-to-login {
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  cursor: pointer;
+  font-family: var(--font-secondary);
+  transition: color 0.2s;
+}
+
+.back-to-login:hover {
+  color: var(--primary);
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 480px) {
+  .verify-card {
+    padding: 2rem 1.5rem;
+  }
+  .otp-container {
+    gap: 0.5rem;
+  }
+  .otp-input {
+    width: 44px;
+    height: 52px;
+    font-size: 1.25rem;
+  }
+}
