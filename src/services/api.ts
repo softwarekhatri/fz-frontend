@@ -4,7 +4,7 @@ import { ProductFilters } from "../types";
 // In production (Vercel), set VITE_API_URL to your deployed backend URL
 // e.g. https://fz-backend.vercel.app/api
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5175/api",
+  baseURL: import.meta.env.VITE_API_URL || "https://fz-backend.vercel.app/api",
   headers: { "Content-Type": "application/json" },
 });
 
