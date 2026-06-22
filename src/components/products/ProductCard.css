@@ -9,7 +9,7 @@
 }
 
 .product-card:hover {
-  box-shadow: 0 12px 40px rgba(255, 107, 157, 0.18);
+  box-shadow: 0 12px 40px rgba(200, 136, 10, 0.18);
 }
 
 .product-card-link {

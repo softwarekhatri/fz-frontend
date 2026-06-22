@@ -62,7 +62,7 @@ const LoginPage: React.FC = () => {
         <div className="auth-left-content">
           <div className="auth-logo">
             <span className="logo-icon">✦</span>
-            <span>FashionZone</span>
+            <span>Poshak Kart</span>
           </div>
           <h2 className="auth-left-heading">
             Style is a way to say who you are without having to speak.
@@ -170,7 +170,7 @@ const LoginPage: React.FC = () => {
           <div className="auth-divider"><span>or</span></div>
 
           <p className="auth-signup-prompt">
-            New to FashionZone?{' '}
+            New to Poshak Kart?{' '}
             <Link to="/signup" className="auth-link">Create your account</Link>
           </p>
         </div>

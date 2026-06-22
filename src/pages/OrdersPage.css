@@ -128,7 +128,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--pink-100);
+  background: var(--gold-100);
   color: var(--primary);
   font-size: 0.65rem;
   font-weight: 800;
@@ -171,7 +171,7 @@
 }
 
 .order-expand-btn:hover {
-  background: var(--pink-100);
+  background: var(--gold-100);
   color: var(--primary);
 }
 
@@ -324,7 +324,7 @@
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background: var(--pink-100);
+  background: var(--gold-100);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -356,12 +356,12 @@
   font-size: 1rem;
   text-decoration: none;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  box-shadow: 0 4px 15px rgba(200, 136, 10, 0.3);
 }
 
 .start-shopping-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.45);
+  box-shadow: 0 8px 25px rgba(200, 136, 10, 0.45);
 }
 
 /* ─── Responsive ─────────────────────────────────────── */

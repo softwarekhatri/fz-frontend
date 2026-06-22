@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--pink-50) 0%, var(--white) 50%, var(--pink-50) 100%);
+  background: linear-gradient(135deg, var(--gold-50) 0%, var(--white) 50%, var(--gold-50) 100%);
   padding: 2rem 1.5rem;
 }
 
@@ -25,13 +25,13 @@
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--pink-100), var(--pink-200));
+  background: linear-gradient(135deg, var(--gold-100), var(--gold-200));
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary);
   margin-bottom: 1.5rem;
-  box-shadow: 0 8px 24px rgba(255, 107, 157, 0.2);
+  box-shadow: 0 8px 24px rgba(200, 136, 10, 0.2);
 }
 
 /* ─── Text ───────────────────────────────────────────── */
@@ -89,13 +89,13 @@
 
 .otp-input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.18);
-  background: var(--pink-50);
+  box-shadow: 0 0 0 3px rgba(200, 136, 10, 0.18);
+  background: var(--gold-50);
 }
 
 .otp-input.filled {
   border-color: var(--primary);
-  background: var(--pink-50);
+  background: var(--gold-50);
   color: var(--primary);
 }
 
@@ -124,14 +124,14 @@
   justify-content: center;
   gap: 0.5rem;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 4px 15px rgba(200, 136, 10, 0.35);
   margin-bottom: 1.5rem;
   font-family: var(--font-secondary);
 }
 
 .verify-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.5);
+  box-shadow: 0 8px 25px rgba(200, 136, 10, 0.5);
 }
 
 .verify-btn:disabled {

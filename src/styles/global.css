@@ -105,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 
-.bg-pink { background-color: var(--pink-100); }
+.bg-gold { background-color: var(--gold-100); }
 .bg-white { background-color: var(--white); }
 
 .flex { display: flex; }
@@ -285,8 +285,8 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-.badge-pink {
-  background: var(--pink-100);
+.badge-gold {
+  background: var(--gold-100);
   color: var(--primary);
 }
 

@@ -195,7 +195,7 @@
 
 .auth-input-wrap input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.15);
+  box-shadow: 0 0 0 3px rgba(200, 136, 10, 0.15);
 }
 
 .auth-input-wrap input.error {
@@ -244,7 +244,7 @@
   justify-content: center;
   gap: 0.5rem;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 4px 15px rgba(200, 136, 10, 0.35);
   margin-top: 0.5rem;
   font-family: var(--font-secondary);
   letter-spacing: 0.02em;
@@ -252,7 +252,7 @@
 
 .auth-submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.5);
+  box-shadow: 0 8px 25px rgba(200, 136, 10, 0.5);
 }
 
 .auth-submit-btn:disabled {

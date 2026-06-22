@@ -6,16 +6,22 @@
 
 .footer-top-bar {
   height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--primary-dark), var(--primary));
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary-dark),
+    var(--primary)
+  );
   background-size: 200% 100%;
   animation: shimmer 3s linear infinite;
+  margin-bottom: 2rem;
 }
 
 .footer-main {
   display: grid;
   grid-template-columns: 1.8fr 1fr 1fr 1fr 1.6fr;
   gap: 3rem;
-  padding: 4rem 1.5rem 3rem;
+  padding: 14rem 1.5rem 3rem;
 }
 
 /* ─── Brand ──────────────────────────────────────────── */
@@ -42,12 +48,14 @@
   font-size: 0.875rem;
   line-height: 1.7;
   color: var(--gray-400);
+  margin-top: 0.75rem;
   margin-bottom: 1.5rem;
 }
 
 .social-links {
   display: flex;
   gap: 0.75rem;
+  padding-bottom: 2rem;
 }
 
 .social-link {
@@ -109,7 +117,7 @@
 }
 
 .footer-links a::before {
-  content: '';
+  content: "";
   width: 0;
   height: 1px;
   background: var(--primary);
@@ -192,7 +200,7 @@
 .newsletter-spinner {
   width: 16px;
   height: 16px;
-  border: 2px solid rgba(255,255,255,0.35);
+  border: 2px solid rgba(255, 255, 255, 0.35);
   border-top-color: #fff;
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
@@ -284,4 +292,24 @@
   .footer-main {
     grid-template-columns: 1fr;
   }
+}
+
+/* ─── Poshak Kart Footer Additions ─────────────────────── */
+.footer-logo-img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: -1.5rem;
+  display: block;
+}
+
+.footer-address {
+  font-size: 0.7rem;
+  color: var(--gray-500);
+  margin-top: 0.25rem;
+}
+
+.footer-links span {
+  font-size: 0.875rem;
+  color: var(--gray-500);
 }

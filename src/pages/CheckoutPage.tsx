@@ -370,7 +370,7 @@ const CheckoutPage: React.FC = () => {
             </div>
             <h2 className="confirmed-title">Order Confirmed!</h2>
             <p className="confirmed-sub">
-              Thank you for shopping with FashionZone. Your order has been placed successfully.
+              Thank you for shopping with Poshak Kart. Your order has been placed successfully.
             </p>
             {orderNumber && (
               <div className="order-number-box">

@@ -1,0 +1,216 @@
+.about-page {
+  background: var(--white);
+}
+
+.about-hero {
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary) 50%, var(--dark) 100%);
+  padding: 5rem 0 4rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.about-hero-content {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.about-badge {
+  display: inline-block;
+  background: rgba(200, 136, 10, 0.2);
+  border: 1px solid var(--primary-light);
+  color: var(--primary-light);
+  padding: 0.35rem 1.2rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.about-hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 0.5rem;
+}
+
+.about-hero-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.about-hero-tagline {
+  font-size: 1.25rem;
+  font-family: var(--font-primary);
+  color: var(--gold-300);
+  font-style: italic;
+}
+
+.about-body {
+  padding: 4rem 1.5rem;
+}
+
+.about-intro {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.about-intro p {
+  font-size: 1.05rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-card {
+  background: var(--gold-50);
+  border: 1px solid var(--gold-100);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.about-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-card h3 {
+  font-size: 1.25rem;
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+  font-family: var(--font-primary);
+}
+
+.about-card p {
+  color: var(--gray-600);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.about-why {
+  background: linear-gradient(135deg, var(--gold-50) 0%, var(--white) 100%);
+  border: 1px solid var(--gold-200);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.about-why h2 {
+  font-size: 1.75rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+}
+
+.about-why-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.about-why-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--gray-700);
+}
+
+.about-check {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.about-business-info {
+  margin-bottom: 4rem;
+}
+
+.about-business-info h2 {
+  font-size: 1.75rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-primary);
+}
+
+.about-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.about-info-grid > div {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+}
+
+.about-info-grid > div span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.about-info-grid > div p {
+  color: var(--gray-800);
+  font-size: 0.95rem;
+}
+
+.about-info-grid > div p a {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.about-promise {
+  text-align: center;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem 2rem;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.about-promise h2 {
+  font-size: 1.75rem;
+  color: var(--primary-light);
+  margin-bottom: 1rem;
+  font-family: var(--font-primary);
+}
+
+.about-promise-text {
+  font-size: 1.2rem;
+  font-family: var(--font-primary);
+  color: var(--gold-300);
+  margin-bottom: 0.75rem;
+}
+
+.about-promise p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  line-height: 1.7;
+}

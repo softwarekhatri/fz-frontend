@@ -42,7 +42,7 @@
   border-color: var(--primary);
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 4px 12px rgba(200, 136, 10, 0.35);
 }
 
 .step-item.completed .step-circle {
@@ -152,7 +152,7 @@
 .form-group input:focus,
 .form-group select:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.12);
+  box-shadow: 0 0 0 3px rgba(200, 136, 10, 0.12);
 }
 
 .form-group input.error,
@@ -187,13 +187,13 @@
   justify-content: center;
   gap: 0.5rem;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  box-shadow: 0 4px 15px rgba(200, 136, 10, 0.3);
   font-family: var(--font-secondary);
 }
 
 .checkout-continue-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+  box-shadow: 0 8px 25px rgba(200, 136, 10, 0.4);
 }
 
 /* ─── Step 2 Review ──────────────────────────────────── */
@@ -394,13 +394,13 @@
   justify-content: center;
   gap: 0.5rem;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  box-shadow: 0 4px 15px rgba(200, 136, 10, 0.3);
   font-family: var(--font-secondary);
 }
 
 .checkout-place-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.45);
+  box-shadow: 0 8px 25px rgba(200, 136, 10, 0.45);
 }
 
 .checkout-place-btn:disabled {
@@ -522,8 +522,8 @@
 }
 
 .order-number-box {
-  background: var(--pink-50);
-  border: 1.5px solid var(--pink-200);
+  background: var(--gold-50);
+  border: 1.5px solid var(--gold-200);
   border-radius: var(--border-radius);
   padding: 1rem 2rem;
   margin-bottom: 1.5rem;
@@ -586,12 +586,12 @@
   font-size: 0.9375rem;
   text-decoration: none;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+  box-shadow: 0 4px 15px rgba(200, 136, 10, 0.3);
 }
 
 .btn-view-orders:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.45);
+  box-shadow: 0 8px 25px rgba(200, 136, 10, 0.45);
 }
 
 .btn-continue-shopping {

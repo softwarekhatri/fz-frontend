@@ -75,7 +75,7 @@ const SignupPage: React.FC = () => {
         <div className="auth-left-content">
           <div className="auth-logo">
             <span className="logo-icon">✦</span>
-            <span>FashionZone</span>
+            <span>Poshak Kart</span>
           </div>
           <h2 className="auth-left-heading">
             Fashion is the armor to survive the reality of everyday life.

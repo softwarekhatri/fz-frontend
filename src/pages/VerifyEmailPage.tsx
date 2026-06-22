@@ -83,7 +83,7 @@ const VerifyEmailPage: React.FC = () => {
       const res = await authAPI.verifyEmail({ email, otp: otpCode });
       const { token, user } = res.data;
       if (token) login(token, user);
-      toast.success(`Welcome to FashionZone, ${user?.name || 'there'}! 🎉`);
+      toast.success(`Welcome to Poshak Kart, ${user?.name || 'there'}! 🎉`);
       navigate('/', { replace: true });
     } catch (err: any) {
       toast.error(err?.response?.data?.message || 'Invalid OTP. Please try again.');

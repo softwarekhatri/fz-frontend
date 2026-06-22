@@ -17,6 +17,11 @@ const OrdersPage = React.lazy(() => import('./pages/OrdersPage'));
 const LoginPage = React.lazy(() => import('./pages/LoginPage'));
 const SignupPage = React.lazy(() => import('./pages/SignupPage'));
 const VerifyEmailPage = React.lazy(() => import('./pages/VerifyEmailPage'));
+const AboutPage = React.lazy(() => import('./pages/AboutPage'));
+const PrivacyPolicyPage = React.lazy(() => import('./pages/PrivacyPolicyPage'));
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
+const RefundPolicyPage = React.lazy(() => import('./pages/RefundPolicyPage'));
+const ShippingPolicyPage = React.lazy(() => import('./pages/ShippingPolicyPage'));
 
 // Auth-gated redirect (for login/signup when already logged in)
 const PublicOnlyRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -128,6 +133,13 @@ const AppRoutes: React.FC = () => (
           </AuthLayout>
         }
       />
+
+      {/* Poshak Kart pages */}
+      <Route path="/about" element={<MainLayout><AboutPage /></MainLayout>} />
+      <Route path="/privacy" element={<MainLayout><PrivacyPolicyPage /></MainLayout>} />
+      <Route path="/contact" element={<MainLayout><ContactPage /></MainLayout>} />
+      <Route path="/returns" element={<MainLayout><RefundPolicyPage /></MainLayout>} />
+      <Route path="/shipping" element={<MainLayout><ShippingPolicyPage /></MainLayout>} />
 
       {/* Catch-all */}
       <Route path="*" element={<Navigate to="/" replace />} />

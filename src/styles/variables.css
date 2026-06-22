@@ -1,14 +1,16 @@
 :root {
-  /* Brand Colors */
-  --primary: #FF6B9D;
-  --primary-dark: #E91E8C;
-  --primary-light: #FF8FAB;
-  --secondary: #FF4081;
-  --pink-50: #FFF0F5;
-  --pink-100: #FFE4EE;
-  --pink-200: #FFBDD5;
-  --pink-300: #FF8FAB;
-  --accent: #FF6B9D;
+  /* Brand Colors - Poshak Kart */
+  --primary: #C8880A;
+  --primary-dark: #A06808;
+  --primary-light: #E8A820;
+  --secondary: #7B1020;
+  --secondary-dark: #5A0A15;
+  --secondary-light: #9B2030;
+  --accent: #C41E3A;
+  --gold-50: #FFFAED;
+  --gold-100: #FFF4D0;
+  --gold-200: #FFE090;
+  --gold-300: #E8A820;
 
   /* Neutral Colors */
   --white: #FFFFFF;
@@ -22,7 +24,7 @@
   --gray-700: #616161;
   --gray-800: #424242;
   --gray-900: #212121;
-  --dark: #1A1A2E;
+  --dark: #3D0A10;
 
   /* Status Colors */
   --success: #4CAF50;
@@ -38,10 +40,10 @@
   --border-radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(255, 107, 157, 0.1);
-  --shadow-md: 0 4px 20px rgba(255, 107, 157, 0.15);
-  --shadow-lg: 0 8px 40px rgba(255, 107, 157, 0.2);
-  --shadow-xl: 0 20px 60px rgba(255, 107, 157, 0.25);
+  --shadow-sm: 0 2px 8px rgba(200, 136, 10, 0.12);
+  --shadow-md: 0 4px 20px rgba(200, 136, 10, 0.18);
+  --shadow-lg: 0 8px 40px rgba(200, 136, 10, 0.22);
+  --shadow-xl: 0 20px 60px rgba(200, 136, 10, 0.28);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
 
   /* Transitions */
@@ -55,5 +57,5 @@
 
   /* Spacing */
   --container-max: 1280px;
-  --header-height: 72px;
+  --header-height: 88px;
 }

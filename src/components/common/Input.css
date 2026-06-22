@@ -39,7 +39,7 @@
 
 .input-field:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.15);
+  box-shadow: 0 0 0 3px rgba(200, 136, 10, 0.15);
 }
 
 .input-field::placeholder {

@@ -126,8 +126,11 @@ const Header: React.FC = () => {
         <div className="header-inner container">
           {/* Logo */}
           <Link to="/" className="header-logo">
-            <span className="logo-icon">✦</span>
-            <span className="logo-text">FashionZone</span>
+            <img src="/logo.png" alt="Poshak Kart" className="header-logo-img" />
+            <div className="header-logo-text-wrap">
+              <span className="logo-text">Poshak Kart</span>
+              <span className="logo-tagline">Apni Pehchaan, Apna Andaaz</span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
@@ -176,7 +179,7 @@ const Header: React.FC = () => {
                         autoFocus
                         type="text"
                         className="search-input"
-                        placeholder="Search styles, brands…"
+                        placeholder="Search kurtas, sarees, fashion…"
                         value={searchQuery}
                         onChange={(e) => {
                           setSearchQuery(e.target.value);
@@ -239,11 +242,7 @@ const Header: React.FC = () => {
 
             {/* Cart */}
             <Link to="/cart" className="header-icon-btn cart-btn" aria-label="Shopping cart">
-              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <line x1="3" y1="6" x2="21" y2="6" strokeWidth="2" strokeLinecap="round" />
-                <path d="M16 10a4 4 0 01-8 0" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <img src="/cart.png" alt="Cart" className={`cart-icon-img ${cartBounce ? 'cart-bounce' : ''}`} />
               {cartCount > 0 && (
                 <span className={`cart-badge ${cartBounce ? 'cart-badge-bounce' : ''}`}>
                   {cartCount > 99 ? '99+' : cartCount}
@@ -339,7 +338,7 @@ const Header: React.FC = () => {
               transition={{ type: 'tween', duration: 0.28 }}
             >
               <div className="mobile-drawer-header">
-                <span className="logo-text" style={{ fontSize: '1.25rem' }}>FashionZone</span>
+                <span className="logo-text" style={{ fontSize: '1.25rem' }}>Poshak Kart</span>
                 <button className="drawer-close" onClick={() => setMenuOpen(false)}>✕</button>
               </div>
 

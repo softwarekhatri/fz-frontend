@@ -171,7 +171,7 @@
 
 .color-sel-btn.selected {
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(255, 107, 157, 0.4);
+  box-shadow: 0 0 0 2px rgba(200, 136, 10, 0.4);
   transform: scale(1.1);
 }
 
@@ -205,7 +205,7 @@
   background: var(--primary);
   border-color: var(--primary);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 2px 8px rgba(200, 136, 10, 0.35);
 }
 
 /* ─── Field Error ────────────────────────────────────── */
@@ -289,13 +289,13 @@
   justify-content: center;
   gap: 0.625rem;
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 4px 20px rgba(200, 136, 10, 0.35);
   font-family: var(--font-secondary);
 }
 
 .add-to-cart-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 107, 157, 0.5);
+  box-shadow: 0 8px 30px rgba(200, 136, 10, 0.5);
 }
 
 .add-to-cart-btn:disabled {
@@ -450,7 +450,7 @@
 }
 
 .modal-close:hover {
-  background: var(--pink-100);
+  background: var(--gold-100);
   color: var(--primary);
 }
 
@@ -465,7 +465,7 @@
 }
 
 .size-guide-table th {
-  background: var(--pink-50);
+  background: var(--gold-50);
   color: var(--primary);
   padding: 0.75rem 1rem;
   text-align: left;
@@ -480,7 +480,7 @@
 }
 
 .highlighted-row {
-  background: var(--pink-50);
+  background: var(--gold-50);
 }
 
 .highlighted-row td {

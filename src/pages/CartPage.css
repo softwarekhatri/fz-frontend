@@ -85,7 +85,7 @@
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: var(--pink-100);
+  background: var(--gold-100);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,12 +122,12 @@
   font-size: 1rem;
   text-decoration: none;
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 4px 20px rgba(200, 136, 10, 0.35);
 }
 
 .empty-cart-cta:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(255, 107, 157, 0.5);
+  box-shadow: 0 8px 30px rgba(200, 136, 10, 0.5);
 }
 
 /* ─── Responsive ─────────────────────────────────────── */

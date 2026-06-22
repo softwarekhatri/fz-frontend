@@ -182,8 +182,8 @@
 
 /* ─── Savings Banner ─────────────────────────────────── */
 .savings-banner {
-  background: linear-gradient(135deg, var(--pink-100), var(--pink-50));
-  border: 1px solid var(--pink-200);
+  background: linear-gradient(135deg, var(--gold-100), var(--gold-50));
+  border: 1px solid var(--gold-200);
   border-radius: var(--border-radius-sm);
   padding: 0.625rem 0.875rem;
   font-size: 0.8rem;
@@ -208,7 +208,7 @@
   justify-content: center;
   gap: 0.5rem;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 4px 15px rgba(200, 136, 10, 0.35);
   font-family: var(--font-secondary);
   letter-spacing: 0.02em;
   margin-bottom: 1.25rem;
@@ -216,7 +216,7 @@
 
 .checkout-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.45);
+  box-shadow: 0 8px 25px rgba(200, 136, 10, 0.45);
 }
 
 .checkout-btn:active {

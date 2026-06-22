@@ -165,7 +165,7 @@
 }
 
 .qty-btn:hover:not(:disabled) {
-  background: var(--pink-100);
+  background: var(--gold-100);
   color: var(--primary);
 }
 

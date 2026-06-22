@@ -51,12 +51,12 @@
 .btn-primary {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.35);
+  box-shadow: 0 4px 15px rgba(200, 136, 10, 0.35);
 }
 
 .btn-primary:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 157, 0.45);
+  box-shadow: 0 8px 25px rgba(200, 136, 10, 0.45);
 }
 
 .btn-primary:active:not(:disabled) {
@@ -146,7 +146,7 @@
 
 .btn-outline .btn-spinner,
 .btn-ghost .btn-spinner {
-  border-color: rgba(255, 107, 157, 0.3);
+  border-color: rgba(200, 136, 10, 0.3);
   border-top-color: var(--primary);
 }
 
