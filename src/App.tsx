@@ -22,6 +22,10 @@ const PrivacyPolicyPage = React.lazy(() => import('./pages/PrivacyPolicyPage'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 const RefundPolicyPage = React.lazy(() => import('./pages/RefundPolicyPage'));
 const ShippingPolicyPage = React.lazy(() => import('./pages/ShippingPolicyPage'));
+const TermsPage = React.lazy(() => import('./pages/TermsPage'));
+const ReturnExchangePage = React.lazy(() => import('./pages/ReturnExchangePage'));
+const PaymentPolicyPage = React.lazy(() => import('./pages/PaymentPolicyPage'));
+const FAQPage = React.lazy(() => import('./pages/FAQPage'));
 
 // Auth-gated redirect (for login/signup when already logged in)
 const PublicOnlyRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -140,6 +144,10 @@ const AppRoutes: React.FC = () => (
       <Route path="/contact" element={<MainLayout><ContactPage /></MainLayout>} />
       <Route path="/returns" element={<MainLayout><RefundPolicyPage /></MainLayout>} />
       <Route path="/shipping" element={<MainLayout><ShippingPolicyPage /></MainLayout>} />
+      <Route path="/terms" element={<MainLayout><TermsPage /></MainLayout>} />
+      <Route path="/return-exchange" element={<MainLayout><ReturnExchangePage /></MainLayout>} />
+      <Route path="/payment-policy" element={<MainLayout><PaymentPolicyPage /></MainLayout>} />
+      <Route path="/faq" element={<MainLayout><FAQPage /></MainLayout>} />
 
       {/* Catch-all */}
       <Route path="*" element={<Navigate to="/" replace />} />

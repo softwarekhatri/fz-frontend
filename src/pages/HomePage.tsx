@@ -58,18 +58,18 @@ const CATEGORIES = [
     count: "1500+ styles",
   },
   {
-    name: "Kids",
+    name: "Backpacks",
     image:
-      "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=600&q=80",
-    link: "/products?category=kids",
-    count: "800+ styles",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80",
+    link: "/products?category=accessories",
+    count: "20+ styles",
   },
   {
-    name: "Accessories",
+    name: "Ethnic Wear",
     image:
-      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80",
-    link: "/products?category=accessories",
-    count: "600+ items",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=80",
+    link: "/products?category=women&subcategory=saree",
+    count: "Sarees & Lehengas",
   },
   {
     name: "New Arrivals",

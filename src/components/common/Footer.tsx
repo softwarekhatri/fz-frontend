@@ -126,10 +126,13 @@ const Footer: React.FC = () => {
               <Link to="/contact">Contact Us</Link>
             </li>
             <li>
-              <Link to="/privacy">Privacy Policy</Link>
+              <Link to="/faq">FAQ</Link>
             </li>
             <li>
-              <Link to="/terms">Terms & Conditions</Link>
+              <Link to="/terms">Terms &amp; Conditions</Link>
+            </li>
+            <li>
+              <Link to="/privacy">Privacy Policy</Link>
             </li>
           </ul>
         </div>
@@ -139,18 +142,20 @@ const Footer: React.FC = () => {
           <h4 className="footer-col-title">Customer Service</h4>
           <ul className="footer-links">
             <li>
-              <Link to="/returns">Refund & Cancellation</Link>
+              <Link to="/returns">Refund &amp; Cancellation</Link>
+            </li>
+            <li>
+              <Link to="/return-exchange">Return &amp; Exchange</Link>
             </li>
             <li>
               <Link to="/shipping">Shipping Policy</Link>
             </li>
             <li>
-              <Link to="/contact">Help Center</Link>
+              <Link to="/payment-policy">Payment Policy</Link>
             </li>
-            <li>
+            {/* <li>
               <a href="mailto:support@poshakkart.in">support@poshakkart.in</a>
-            </li>
-            {/* <li><span>Mon–Sat: 10 AM – 7 PM</span></li> */}
+            </li> */}
           </ul>
         </div>
 
@@ -165,10 +170,13 @@ const Footer: React.FC = () => {
               <Link to="/products?category=men">Men</Link>
             </li>
             <li>
-              <Link to="/products?category=kids">Kids</Link>
+              <Link to="/products?category=accessories">Backpacks</Link>
             </li>
             <li>
               <Link to="/products?isNew=true">New Arrivals</Link>
+            </li>
+            <li>
+              <Link to="/products?featured=true">Featured</Link>
             </li>
           </ul>
         </div>

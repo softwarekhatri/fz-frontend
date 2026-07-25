@@ -13,8 +13,7 @@ const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Women', path: '/products?category=women' },
   { label: 'Men', path: '/products?category=men' },
-  { label: 'Kids', path: '/products?category=kids' },
-  { label: 'Accessories', path: '/products?category=accessories' },
+  { label: 'Backpacks', path: '/products?category=accessories' },
   { label: 'New Arrivals', path: '/products?isNew=true' },
 ];
 
