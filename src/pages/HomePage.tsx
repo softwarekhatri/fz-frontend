@@ -470,20 +470,12 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* ─── Trending Brands Strip ───────────────────────────────── */}
+      {/* changes in text => Text Removed from P and Data Array */}
       <section className="brands-section">
         <div className="container">
-          <p className="brands-label">SHOP BY CATEGORY</p>
+          <p className="brands-label"></p>
           <div className="brands-list">
-            {[
-              "Zara",
-              "H&M",
-              "Nike",
-              "Adidas",
-              "Levi's",
-              "Tommy Hilfiger",
-              "Ralph Lauren",
-              "Gucci",
-            ].map((brand) => (
+            {[].map((brand) => (
               <button
                 key={brand}
                 className="brand-tag"
