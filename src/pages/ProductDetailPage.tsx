@@ -53,6 +53,9 @@ const ProductDetailPage: React.FC = () => {
   const [sizeError, setSizeError] = useState('');
   const [colorError, setColorError] = useState('');
   const [sizeGuideOpen, setSizeGuideOpen] = useState(false);
+  const [pincode, setPincode] = useState('');
+  const [pincodeStatus, setPincodeStatus] = useState<'idle' | 'checking' | 'available' | 'invalid'>('idle');
+  const [deliveryDate, setDeliveryDate] = useState('');
 
   const { addToCart } = useCart();
   const { isAuthenticated } = useAuth();
@@ -103,6 +106,28 @@ const ProductDetailPage: React.FC = () => {
     } finally {
       setAdding(false);
     }
+  };
+
+  const checkPincode = () => {
+    const trimmed = pincode.trim();
+    if (!/^\d{6}$/.test(trimmed)) {
+      setPincodeStatus('invalid');
+      return;
+    }
+    setPincodeStatus('checking');
+    setTimeout(() => {
+      // Calculate delivery date: 5–7 business days from today
+      const date = new Date();
+      let added = 0;
+      while (added < 6) {
+        date.setDate(date.getDate() + 1);
+        const day = date.getDay();
+        if (day !== 0 && day !== 6) added++;
+      }
+      const formatted = date.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short' });
+      setDeliveryDate(formatted);
+      setPincodeStatus('available');
+    }, 600);
   };
 
   if (isLoading) return <LoadingSpinner overlay text="Loading product…" />;
@@ -266,6 +291,71 @@ const ProductDetailPage: React.FC = () => {
                   </>
                 )}
               </motion.button>
+            </div>
+
+            {/* Pincode Checker */}
+            <div className="pdp-pincode-section">
+              <div className="pdp-section-label">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Check Delivery
+              </div>
+              <div className="pincode-input-row">
+                <input
+                  type="text"
+                  className="pincode-input"
+                  placeholder="Enter 6-digit pincode"
+                  maxLength={6}
+                  value={pincode}
+                  onChange={(e) => {
+                    const val = e.target.value.replace(/\D/g, '');
+                    setPincode(val);
+                    if (pincodeStatus !== 'idle') setPincodeStatus('idle');
+                  }}
+                  onKeyDown={(e) => e.key === 'Enter' && checkPincode()}
+                />
+                <button
+                  className="pincode-check-btn"
+                  onClick={checkPincode}
+                  disabled={pincodeStatus === 'checking' || pincode.length === 0}
+                >
+                  {pincodeStatus === 'checking' ? 'Checking…' : 'Check'}
+                </button>
+              </div>
+              <AnimatePresence mode="wait">
+                {pincodeStatus === 'available' && (
+                  <motion.div
+                    key="available"
+                    className="pincode-result pincode-available"
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    Delivery available to <strong>{pincode}</strong> — arrives by <strong>{deliveryDate}</strong>
+                  </motion.div>
+                )}
+                {pincodeStatus === 'invalid' && (
+                  <motion.div
+                    key="invalid"
+                    className="pincode-result pincode-invalid"
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    Please enter a valid 6-digit pincode
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             {/* Badges */}

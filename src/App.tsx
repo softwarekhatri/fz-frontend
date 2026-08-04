@@ -26,6 +26,8 @@ const TermsPage = React.lazy(() => import('./pages/TermsPage'));
 const ReturnExchangePage = React.lazy(() => import('./pages/ReturnExchangePage'));
 const PaymentPolicyPage = React.lazy(() => import('./pages/PaymentPolicyPage'));
 const FAQPage = React.lazy(() => import('./pages/FAQPage'));
+const CookiePolicyPage = React.lazy(() => import('./pages/CookiePolicyPage'));
+const DisclaimerPage = React.lazy(() => import('./pages/DisclaimerPage'));
 
 // Auth-gated redirect (for login/signup when already logged in)
 const PublicOnlyRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -148,6 +150,8 @@ const AppRoutes: React.FC = () => (
       <Route path="/return-exchange" element={<MainLayout><ReturnExchangePage /></MainLayout>} />
       <Route path="/payment-policy" element={<MainLayout><PaymentPolicyPage /></MainLayout>} />
       <Route path="/faq" element={<MainLayout><FAQPage /></MainLayout>} />
+      <Route path="/cookie-policy" element={<MainLayout><CookiePolicyPage /></MainLayout>} />
+      <Route path="/disclaimer" element={<MainLayout><DisclaimerPage /></MainLayout>} />
 
       {/* Catch-all */}
       <Route path="*" element={<Navigate to="/" replace />} />

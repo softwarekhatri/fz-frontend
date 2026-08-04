@@ -14,7 +14,6 @@ interface FilterPanelProps {
 const CATEGORIES = [
   { label: 'Women', value: 'women', icon: '👗' },
   { label: 'Men', value: 'men', icon: '👔' },
-  { label: 'Backpacks', value: 'accessories', icon: '🎒' },
 ];
 
 const SIZES = ['XS', 'S', 'M', 'L', 'XL', 'XXL', '28', '30', '32', '34', '36', '38', 'UK 3', 'UK 4', 'UK 5', 'UK 6', 'UK 7', 'UK 8', 'Free Size', 'One Size'];

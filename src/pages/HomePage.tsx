@@ -9,7 +9,7 @@ import "./HomePage.css";
 const HERO_SLIDES = [
   {
     id: 1,
-    bg: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920&q=80",
+    bg: "/products/heroSlides/NewArrivals.png",
     tag: "New Season Arrivals",
     heading: "Apni Pehchaan,\nApna Andaaz",
     sub: "Discover curated ethnic and contemporary fashion that speaks your personality — bold, beautiful, and uniquely Indian.",
@@ -20,7 +20,7 @@ const HERO_SLIDES = [
   },
   {
     id: 2,
-    bg: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&q=80",
+    bg: "/products/heroSlides/SalwarSuit.png",
     tag: "Limited Edition",
     heading: "Summer Collection\n2026",
     sub: "Vibrant colors, quality fabrics, and timeless silhouettes for the season ahead.",
@@ -31,7 +31,7 @@ const HERO_SLIDES = [
   },
   {
     id: 3,
-    bg: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80",
+    bg: "/products/heroSlides/Saree.png",
     tag: "Exclusive Deals",
     heading: "Up to 50% Off\nPremium Fashion",
     sub: "Your favorite premium fashion at prices that make you smile. Limited time offers.",
@@ -44,40 +44,44 @@ const HERO_SLIDES = [
 
 const CATEGORIES = [
   {
-    name: "Women",
-    image:
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80",
+    name: "New Arrivals",
+    image: "/products/categories/newArrivals.png",
+    link: "/products?isNew=true",
+    count: "1500+ styles",
+  },
+  {
+    name: "Women's Fashion",
+    image: "/products/categories/women.png",
     link: "/products?category=women",
     count: "2000+ styles",
   },
   {
-    name: "Men",
-    image:
-      "https://images.unsplash.com/photo-1488161628813-04466f872be2?w=600&q=80",
+    name: "Men's Fashion",
+    image: "/products/categories/men.png",
     link: "/products?category=men",
     count: "1500+ styles",
   },
-  {
-    name: "Backpacks",
-    image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80",
-    link: "/products?category=accessories",
-    count: "20+ styles",
-  },
-  {
-    name: "Ethnic Wear",
-    image:
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=80",
-    link: "/products?category=women&subcategory=saree",
-    count: "Sarees & Lehengas",
-  },
-  {
-    name: "New Arrivals",
-    image:
-      "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&q=80",
-    link: "/products?isNew=true",
-    count: "Fresh drops",
-  },
+  // {
+  //   name: "Backpacks",
+  //   image:
+  //     "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80",
+  //   link: "/products?category=accessories",
+  //   count: "20+ styles",
+  // },
+  // {
+  //   name: "Ethnic Wear",
+  //   image:
+  //     "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=80",
+  //   link: "/products?category=women&subcategory=saree",
+  //   count: "Sarees & Lehengas",
+  // },
+  // {
+  //   name: "New Arrivals",
+  //   image:
+  //     "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=600&q=80",
+  //   link: "/products?isNew=true",
+  //   count: "Fresh drops",
+  // },
 ];
 
 const WHY_ITEMS = [
@@ -211,53 +215,12 @@ const HomePage: React.FC = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ backgroundImage: `url(${slide.bg})` }}
               >
-                <div className="hero-overlay" />
-                <div className="hero-content container">
-                  <motion.span
-                    className="hero-tag"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                  >
-                    {slide.tag}
-                  </motion.span>
-                  <motion.h1
-                    className="hero-heading"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.35 }}
-                  >
-                    {slide.heading.split("\n").map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        {i === 0 && <br />}
-                      </React.Fragment>
-                    ))}
-                  </motion.h1>
-                  <motion.p
-                    className="hero-sub"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                  >
-                    {slide.sub}
-                  </motion.p>
-                  <motion.div
-                    className="hero-ctas"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.65 }}
-                  >
-                    <Link to={slide.cta1Link} className="hero-btn-primary">
-                      {slide.cta1}
-                    </Link>
-                    <Link to={slide.cta2Link} className="hero-btn-secondary">
-                      {slide.cta2}
-                    </Link>
-                  </motion.div>
-                </div>
+                <img
+                  src={slide.bg}
+                  alt={slide.tag}
+                  className="hero-slide-img"
+                />
               </motion.div>
             ) : null,
           )}
@@ -332,7 +295,7 @@ const HomePage: React.FC = () => {
           {CATEGORIES.map((cat, i) => (
             <motion.div
               key={cat.name}
-              className={`category-card ${i === 0 ? "cat-large" : ""}`}
+              className="category-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
