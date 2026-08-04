@@ -17,6 +17,7 @@ const HERO_SLIDES = [
     cta1Link: "/products?category=women",
     cta2: "Shop Men",
     cta2Link: "/products?category=men",
+    link: "/products?isNew=true",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const HERO_SLIDES = [
     cta1Link: "/products?isNew=true",
     cta2: "View Collection",
     cta2Link: "/products",
+    link: "/products?category=women&search=suit",
   },
   {
     id: 3,
@@ -39,6 +41,7 @@ const HERO_SLIDES = [
     cta1Link: "/products?sort=-discount",
     cta2: "All Products",
     cta2Link: "/products",
+    link: "/products?category=women&search=saree",
   },
 ];
 
@@ -216,11 +219,13 @@ const HomePage: React.FC = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <img
-                  src={slide.bg}
-                  alt={slide.tag}
-                  className="hero-slide-img"
-                />
+                <Link to={slide.link} className="hero-slide-link">
+                  <img
+                    src={slide.bg}
+                    alt={slide.tag}
+                    className="hero-slide-img"
+                  />
+                </Link>
               </motion.div>
             ) : null,
           )}
