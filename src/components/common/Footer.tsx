@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
       <div className="footer-main container">
         {/* Brand */}
         <div className="footer-brand">
-          <p className="footer-logo-text">Poshak Kart</p>
+          <img src="/logo.png" alt="Poshak Kart" className="footer-logo-img" />
           <p className="footer-tagline">
             Poshak Kart — Apni Pehchaan, Apna Andaaz. Your trusted destination
             for quality fashion across India.
