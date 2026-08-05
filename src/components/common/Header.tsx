@@ -125,12 +125,9 @@ const Header: React.FC = () => {
     }
   };
 
-  const isHomePage = location.pathname === "/";
-  const isTransparent = isHomePage && !scrolled;
-
   return (
     <>
-      <header className={`header ${scrolled ? "header-scrolled" : ""} ${isTransparent ? "header-transparent" : ""}`}>
+      <header className={`header ${scrolled ? "header-scrolled" : ""}`}>
         <div className="header-inner container">
           {/* Logo */}
           <Link to="/" className="header-logo">
