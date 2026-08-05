@@ -89,6 +89,7 @@ export interface ProductFilters {
   subcategory?: string;
   minPrice?: number;
   maxPrice?: number;
+  minDiscount?: number;
   sizes?: string;
   colors?: string;
   sort?: string;

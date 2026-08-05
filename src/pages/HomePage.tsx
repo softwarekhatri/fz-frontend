@@ -369,7 +369,7 @@ const HomePage: React.FC = () => {
             <h2>Season Sale — Up to 50% Off</h2>
             <p>Limited time offer. Don't miss out on your favorite styles.</p>
           </div>
-          <Link to="/products?sort=-discount" className="promo-banner-btn">
+          <Link to="/products?minDiscount=1&sort=-discount" className="promo-banner-btn">
             Shop the Sale
           </Link>
         </div>

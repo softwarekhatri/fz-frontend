@@ -21,6 +21,7 @@ const ProductsPage: React.FC = () => {
     subcategory: searchParams.get('subcategory') || undefined,
     minPrice: searchParams.get('minPrice') ? Number(searchParams.get('minPrice')) : undefined,
     maxPrice: searchParams.get('maxPrice') ? Number(searchParams.get('maxPrice')) : undefined,
+    minDiscount: searchParams.get('minDiscount') ? Number(searchParams.get('minDiscount')) : undefined,
     sizes: searchParams.get('sizes') || undefined,
     colors: searchParams.get('colors') || undefined,
     sort: searchParams.get('sort') || '-createdAt',
@@ -70,6 +71,7 @@ const ProductsPage: React.FC = () => {
     filters.search && { key: 'search', label: `Search: "${filters.search}"` },
     filters.minPrice && { key: 'minPrice', label: `Min: ₹${filters.minPrice}` },
     filters.maxPrice && { key: 'maxPrice', label: `Max: ₹${filters.maxPrice}` },
+    filters.minDiscount && { key: 'minDiscount', label: `Min Discount: ${filters.minDiscount}%` },
     filters.sizes && { key: 'sizes', label: `Sizes: ${filters.sizes}` },
     filters.colors && { key: 'colors', label: `Colors: ${filters.colors}` },
     filters.isNew && { key: 'isNew', label: 'New Arrivals' },
@@ -90,6 +92,8 @@ const ProductsPage: React.FC = () => {
     ? 'New Arrivals'
     : filters.featured
     ? 'Featured Collection'
+    : filters.minDiscount
+    ? `Sale — Up to ${filters.minDiscount}% Off & More`
     : 'All Products';
 
   return (
