@@ -460,19 +460,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* ─── Newsletter ──────────────────────────────────────────── */}
-      <section className="newsletter-section">
-        <div className="container newsletter-inner">
-          <div className="newsletter-text">
-            <h2>Stay in Style with Poshak Kart</h2>
-            <p>
-              Get exclusive deals, style tips, and early access to new arrivals
-              delivered to your inbox.
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

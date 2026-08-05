@@ -22,21 +22,81 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer">
-      <div className="footer-top-bar" />
+      {/* ── Newsletter ─────────────────────────────────────── */}
+      <div className="footer-newsletter-section">
+        <div className="container footer-newsletter-inner">
+          <h2 className="newsletter-heading">Stay in Style with Poshak Kart</h2>
+          <p className="newsletter-sub">
+            Get exclusive deals, style tips, and early access to new arrivals
+            delivered to your inbox.
+          </p>
+          <form className="newsletter-form" onSubmit={handleSubscribe}>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="newsletter-input"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={subscribing}
+            />
+            <button
+              type="submit"
+              className="newsletter-btn"
+              disabled={subscribing}
+            >
+              {subscribing ? (
+                <span className="newsletter-spinner" />
+              ) : (
+                <>
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                  </svg>
+                  Subscribe
+                </>
+              )}
+            </button>
+          </form>
+          <p className="newsletter-privacy">No spam. Unsubscribe anytime.</p>
+        </div>
+        <div className="footer-top-bar" />
+        <div className="footer-dots-row" />
+      </div>
+
+      {/* ── Main Columns ───────────────────────────────────── */}
       <div className="footer-main container">
         {/* Brand */}
         <div className="footer-brand">
-          <div className="footer-logo">
-            <img
-              src="/logo.png"
-              alt="Poshak Kart"
-              className="footer-logo-img"
-            />
-          </div>
+          <p className="footer-logo-text">Poshak Kart</p>
           <p className="footer-tagline">
-            Poshak Kart – Apni Pehchaan, Apna Andaaz. Your trusted destination
+            Poshak Kart — Apni Pehchaan, Apna Andaaz. Your trusted destination
             for quality fashion across India.
           </p>
+          <a href="mailto:support@poshakkart.in" className="footer-email">
+            <svg
+              width="14"
+              height="14"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            support@poshakkart.in
+          </a>
           <div className="social-links">
             <a
               href="https://instagram.com"
@@ -115,17 +175,19 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Company Links */}
+        {/* Company */}
         <div className="footer-links-col">
           <h4 className="footer-col-title">Company</h4>
           <ul className="footer-links">
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/contact">Contact Us</Link></li>
-            <li><Link to="/faq">FAQ</Link></li>
-            <li><Link to="/terms">Terms &amp; Conditions</Link></li>
-            <li><Link to="/privacy">Privacy Policy</Link></li>
-            <li><Link to="/cookie-policy">Cookie Policy</Link></li>
-            <li><Link to="/disclaimer">Disclaimer</Link></li>
+            <li>
+              <Link to="/about">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/faq">FAQ</Link>
+            </li>
           </ul>
         </div>
 
@@ -133,10 +195,18 @@ const Footer: React.FC = () => {
         <div className="footer-links-col">
           <h4 className="footer-col-title">Customer Service</h4>
           <ul className="footer-links">
-            <li><Link to="/returns">Refund &amp; Cancellation</Link></li>
-            <li><Link to="/return-exchange">Return &amp; Exchange</Link></li>
-            <li><Link to="/shipping">Shipping Policy</Link></li>
-            <li><Link to="/payment-policy">Payment Policy</Link></li>
+            <li>
+              <Link to="/returns">Refund &amp; Cancellation</Link>
+            </li>
+            <li>
+              <Link to="/return-exchange">Return &amp; Exchange</Link>
+            </li>
+            <li>
+              <Link to="/shipping">Shipping Policy</Link>
+            </li>
+            <li>
+              <Link to="/payment-policy">Payment Policy</Link>
+            </li>
           </ul>
         </div>
 
@@ -144,84 +214,38 @@ const Footer: React.FC = () => {
         <div className="footer-links-col">
           <h4 className="footer-col-title">Categories</h4>
           <ul className="footer-links">
-            <li><Link to="/products?category=women">Women</Link></li>
-            <li><Link to="/products?category=men">Men</Link></li>
-            <li><Link to="/products?isNew=true">New Arrivals</Link></li>
-            <li><Link to="/products?featured=true">Featured</Link></li>
+            <li>
+              <Link to="/products?category=women">Women</Link>
+            </li>
+            <li>
+              <Link to="/products?category=men">Men</Link>
+            </li>
+            <li>
+              <Link to="/products?isNew=true">New Arrivals</Link>
+            </li>
           </ul>
-        </div>
-
-        {/* Newsletter */}
-        <div className="footer-newsletter">
-          <h4 className="footer-col-title">Stay in Style</h4>
-          <p className="newsletter-desc">
-            Subscribe to get exclusive deals, style inspiration and latest
-            arrivals from Poshak Kart.
-          </p>
-          <form className="newsletter-form" onSubmit={handleSubscribe}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="newsletter-input"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              disabled={subscribing}
-            />
-            <button
-              type="submit"
-              className="newsletter-btn"
-              disabled={subscribing}
-            >
-              {subscribing ? (
-                <span className="newsletter-spinner" />
-              ) : (
-                <>
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="22" y1="2" x2="11" y2="13" />
-                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                  </svg>
-                  Subscribe
-                </>
-              )}
-            </button>
-          </form>
-          <p className="newsletter-privacy">No spam. Unsubscribe anytime.</p>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      {/* <div className="footer-bottom">
+      {/* ── Bottom Bar ─────────────────────────────────────── */}
+      <div className="footer-bottom">
         <div className="container footer-bottom-inner">
-          <p className="footer-copy">
-            &copy; {new Date().getFullYear()} Poshak Kart. A Brand of JAI MAA
-            SHARDA ENTERPRISES. All rights reserved.
-          </p>
-          <p className="footer-address">
-            Near ICICI Building, East Ram Krishna Nagar, Bypass Road, Patna,
-            Bihar – 800027 | GSTIN: 10FEFPK9128P1Z4
-          </p>
-          <div className="footer-legal-links">
-            <Link to="/privacy">Privacy Policy</Link>
-            <Link to="/terms">Terms & Conditions</Link>
-            <Link to="/returns">Refund Policy</Link>
+          <div className="footer-bottom-left">
+            <p className="footer-copy">
+              © 2026 Poshak Kart. All rights reserved.
+            </p>
+            <p className="footer-address">
+              Jai Maa Sharda Enterprises &nbsp;·&nbsp; GSTIN: 10FEFPK9128P1Z4
+            </p>
           </div>
-          <div className="footer-payment-icons">
-            <span className="payment-icon">VISA</span>
-            <span className="payment-icon">MC</span>
-            <span className="payment-icon">UPI</span>
-            <span className="payment-icon">COD</span>
+          <div className="footer-legal-links">
+            <Link to="/terms">Terms &amp; Conditions</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/cookie-policy">Cookie Policy</Link>
+            <Link to="/disclaimer">Disclaimer</Link>
           </div>
         </div>
-      </div> */}
+      </div>
     </footer>
   );
 };
