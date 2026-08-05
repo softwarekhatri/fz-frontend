@@ -225,6 +225,12 @@
   margin-top: 0.2rem;
 }
 
+.product-tax-note {
+  font-size: 0.68rem;
+  color: var(--gray-400);
+  margin-top: 0.1rem;
+}
+
 .product-price {
   font-size: 1rem;
   font-weight: 700;

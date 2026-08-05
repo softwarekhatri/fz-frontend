@@ -9,7 +9,7 @@ import "./HomePage.css";
 const HERO_SLIDES = [
   {
     id: 1,
-    bg: "/products/heroSlides/NewArrivals.png",
+    bg: "https://res.cloudinary.com/vj9trrqx/image/upload/v1785916884/NewArrivals_x9xzjm.png",
     tag: "New Season Arrivals",
     heading: "Apni Pehchaan,\nApna Andaaz",
     sub: "Discover curated ethnic and contemporary fashion that speaks your personality — bold, beautiful, and uniquely Indian.",
@@ -21,7 +21,7 @@ const HERO_SLIDES = [
   },
   {
     id: 2,
-    bg: "/products/heroSlides/SalwarSuit.png",
+    bg: "https://res.cloudinary.com/vj9trrqx/image/upload/v1785916939/SalwarSuit_mmpqy0.png",
     tag: "Limited Edition",
     heading: "Summer Collection\n2026",
     sub: "Vibrant colors, quality fabrics, and timeless silhouettes for the season ahead.",
@@ -33,7 +33,7 @@ const HERO_SLIDES = [
   },
   {
     id: 3,
-    bg: "/products/heroSlides/Saree.png",
+    bg: "https://res.cloudinary.com/vj9trrqx/image/upload/v1785916884/Saree_ixdcmx.png",
     tag: "Exclusive Deals",
     heading: "Up to 50% Off\nPremium Fashion",
     sub: "Your favorite premium fashion at prices that make you smile. Limited time offers.",
@@ -48,19 +48,22 @@ const HERO_SLIDES = [
 const CATEGORIES = [
   {
     name: "New Arrivals",
-    image: "/products/categories/newArrivals.png",
+    image:
+      "https://res.cloudinary.com/vj9trrqx/image/upload/v1785916962/newArrivals_z4b1ww.png",
     link: "/products?isNew=true",
     count: "1500+ styles",
   },
   {
     name: "Women's Fashion",
-    image: "/products/categories/women.png",
+    image:
+      "https://res.cloudinary.com/vj9trrqx/image/upload/v1785916964/women_opriab.png",
     link: "/products?category=women",
     count: "2000+ styles",
   },
   {
     name: "Men's Fashion",
-    image: "/products/categories/men.png",
+    image:
+      "https://res.cloudinary.com/vj9trrqx/image/upload/v1785916962/men_dek6ra.png",
     link: "/products?category=men",
     count: "1500+ styles",
   },
@@ -106,7 +109,7 @@ const WHY_ITEMS = [
       </svg>
     ),
     title: "Free Returns",
-    desc: "30-day hassle-free returns on all orders, no questions asked.",
+    desc: "07-day hassle-free returns on all orders, no questions asked.",
   },
   {
     icon: (

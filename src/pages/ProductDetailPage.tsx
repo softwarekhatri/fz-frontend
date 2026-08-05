@@ -195,6 +195,7 @@ const ProductDetailPage: React.FC = () => {
                 </>
               )}
             </div>
+            <p className="pdp-tax-note">Inclusive of All Taxes</p>
             {product.originalPrice > product.price && (
               <p className="pdp-savings">You save {formatPrice(product.originalPrice - product.price)}</p>
             )}
@@ -371,7 +372,7 @@ const ProductDetailPage: React.FC = () => {
                   <polyline points="1 4 1 10 7 10" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M3.51 15a9 9 0 1 0 .49-4" strokeLinecap="round" />
                 </svg>
-                30-day easy returns
+                07-day easy returns
               </div>
               <div className="pdp-badge">
                 <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -400,7 +401,7 @@ const ProductDetailPage: React.FC = () => {
                 <div className="accordion-text">
                   <p>• <strong>Standard Delivery:</strong> 5–7 business days</p>
                   <p>• <strong>Express Delivery:</strong> 2–3 business days</p>
-                  <p>• <strong>Free Returns:</strong> Within 30 days of delivery</p>
+                  <p>• <strong>Free Returns:</strong> Within 07 days of delivery</p>
                   <p>• <strong>COD Available:</strong> On orders above ₹299</p>
                 </div>
               </AccordionItem>
@@ -420,19 +421,19 @@ const ProductDetailPage: React.FC = () => {
       {/* Size Guide Modal */}
       <AnimatePresence>
         {sizeGuideOpen && (
-          <>
-            <motion.div
-              className="modal-overlay"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSizeGuideOpen(false)}
-            />
+          <motion.div
+            className="modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSizeGuideOpen(false)}
+          >
             <motion.div
               className="size-guide-modal"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
+              onClick={(e) => e.stopPropagation()}
             >
               <div className="modal-header">
                 <h3>Size Guide</h3>
@@ -463,7 +464,7 @@ const ProductDetailPage: React.FC = () => {
                 </table>
               </div>
             </motion.div>
-          </>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

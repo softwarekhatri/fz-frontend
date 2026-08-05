@@ -141,6 +141,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
               <span className="discount-badge">{discount}% off</span>
             )}
           </div>
+          <p className="product-tax-note">Inclusive of All Taxes</p>
 
           {/* Color Swatches */}
           {product.colors?.length > 0 && (
