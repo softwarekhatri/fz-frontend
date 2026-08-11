@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
               </svg>
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/poshakkart26"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
